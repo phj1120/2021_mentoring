@@ -21,7 +21,7 @@ chrome_options = webdriver.ChromeOptions()
 # chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-dev-shm-usage')
-driver = webdriver.Chrome('../chromedriver/93.0.4577.15/chromedriver.exe', options=chrome_options)
+driver = webdriver.Chrome('chromedriver/93.0.4577.15/chromedriver.exe', options=chrome_options)
 
 # 디렉터리 생성
 pwd = os.getcwd()
