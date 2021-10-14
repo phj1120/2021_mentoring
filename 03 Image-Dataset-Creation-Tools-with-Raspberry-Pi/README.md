@@ -2,10 +2,8 @@
 
 ## 환경
 ```bash
-pip install selnium
 pip install paho-mqtt
 ```
-
 
 ## 구성
 * 라즈베리파이 4 B+ 4대
@@ -19,16 +17,24 @@ pip install paho-mqtt
 
 ## 소스 코드
 
-### 1. raspberry_pi_subscribe.py
+### 01 subscribe_raspberry_pi.py
 
-* 라즈베리파이 카메라가 연결된 라즈베리파이에서 실행 할 코드
+* 라즈베리파이에서 실행시키는 코드
 
-* MQTT 프로토콜 이용해 대수 제한 없이 원하는 만큼 조작 가능
+* controller, controller_easy 로 신호 보내면 촬영 시작
 
-### 2. control_raspberry_pi.py
 
-* 라즈베리파이 제어
+### 02 subscribe_pc.py
 
-### 3. control_raspberry_pi_easy.py
+* PC 에서 실행시키는 코드
+
+* controller, controller_easy 실행 여부 쉽게 확인하기 위해서 제작
+
+### 03 controller.py
+
+* python 으로 라즈베리파이 컨트롤 하는 코드
+
+### 04 controller_easy.py
 
 * 촬영 진행 중 불편해 더 간단하게 사용할 수 있도록 수정
+

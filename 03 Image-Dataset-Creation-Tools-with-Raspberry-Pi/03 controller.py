@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# 라즈베리파이
 
 import paho.mqtt.client as mqtt
 import threading
