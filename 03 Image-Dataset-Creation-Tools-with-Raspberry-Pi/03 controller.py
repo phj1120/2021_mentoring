@@ -6,6 +6,15 @@ import threading
 
 camera_signal_message = " "
 
+# 장수 확인용으로 구독하나 했음
+# client_raspberrypi_sub
+# on_connect_raspberrypi_sub, on_message_raspberrypi_sub
+
+# 아 이거 쓰레드 안에 넣어야 계속 사용 할 수 있었던거같음
+# 아니면 mqtt 는 루프 도는데  신호 보내는 코드(pub_message) 는 한 번 실행되고 끝나서 쓰레드 돌림
+# 무조건 해야 되는지는 모르겠는데 나는 일단 이렇게 했고
+# 너가 코드 어떻게 짜느냐에 따라 더 좋은 방법이 있을수도 있을 거 같아아
+
 
 # RaspberryPi Subscribe
 def on_connect_raspberrypi_sub(client, userdata, flags, rc):
